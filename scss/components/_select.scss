@@ -1,0 +1,87 @@
+@use "../abstracts/mixins" as mix;
+
+.custom-select {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  @include mix.mobile {
+    font-size: 12px;
+  }
+
+  @include mix.tablet {
+    width: 40%;
+  }
+
+  & + & {
+    margin-left: 26px;
+  }
+
+  &__selected {
+    width: 260px;
+    height: 50px;
+    padding: 0 20px;
+    line-height: 50px;
+    border-radius: 10px;
+    border: 1px dashed #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &.disabled {
+      color: #767676;
+      cursor: default;
+    }
+
+    @include mix.tablet {
+      width: 100%;
+    }
+  }
+
+  &__options {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    margin-top: 8px;
+    padding: 4px 0;
+    background: #fff;
+    border: 1px dashed #000;
+    border-radius: 10px;
+    z-index: 100;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: auto;
+    transition: all 0.2s ease;
+
+    &:empty {
+      border: none;
+      padding: 0;
+      height: 0;
+    }
+  }
+
+  &__option {
+    padding: 10px 20px;
+    cursor: pointer;
+
+    &:hover {
+      background: #f5f5f5;
+    }
+  }
+}
+
+.custom-select.open .custom-select__options {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.custom-select.open
+  .custom-select__selected.disabled
+  + .custom-select__options {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
