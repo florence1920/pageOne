@@ -1,54 +1,23 @@
-@use "../abstracts/mixins" as mix;
-
 input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: none;
   outline: none;
   background: none;
-
-  width: 260px;
-  height: 50px;
+  box-sizing: border-box;
+  
+  border: 1px solid #767676;
+  width: 100%;
+  height: 40px;
   padding: 12px 20px;
-  border: 1px dashed #000;
-  border-radius: 8px;
-  font-size: 16px;
-  @include mix.mobile {
-    font-size: 12px;
-  }
+  border-radius: 40px;
+  background-image: url('../assets/image/icon/search.png');
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  
   &::placeholder {
     color: #767676;
-    @include mix.mobile {
-      font-size: 12px;
-    }
-  }
-
-  @include mix.tablet {
-    width: 100%;
-  }
-  &[type="date"] {
-    width: 40%;
   }
 }
 
-.add-form__item-detail {
-  > li {
-    height: 40px;
-    display: flex;
-    align-items: baseline;
-    gap: 10px;
-    > label {
-      width: 74px;
-    }
-  }
-  .input-detail {
-    width: 50px;
-    height: 40px;
-    padding: 10px 0 0 0;
-    text-align: center;
-    border: none;
-    border-bottom: 1px dashed #000;
-    border-radius: 0;
-  }
-}

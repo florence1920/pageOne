@@ -1,18 +1,16 @@
 @use "abstracts/font";
+@use "abstracts/variables";
 
 @use "base/reset";
 @use "base/typography";
 @use "base/base";
-@use "base/utils";
+@use "base/utilities";
 
-@use "components/input";
 @use "components/buttons";
-@use "components/select";
-@use "components/textarea";
+@use "components/dialog";
+@use "components/input";
 
 @use "layout/header";
 @use "layout/content";
 
 @use "pages/home";
-@use "pages/add";
-@use "pages/stat";

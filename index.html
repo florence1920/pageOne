@@ -4,13 +4,170 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
-  <script src="./js/main.js"></script>
+  <script type="module" src="./js/main.js"></script>
   <link rel="stylesheet" href="./scss/main.css">
   <title>Document</title>
 </head>
 <body>
-  hi
-  안녕하세요
-  <h1>hello</h1>
+  <header>
+    <div class="header__left">
+      <button class="btn--icon btn--icon--menu btn-dialog" aria-label="메뉴 열기">
+        <img src="./assets/image/icon/menu.png" alt="">
+      </button>
+    </div>
+    <div class="header__center">
+      <h1>
+        <a href="/" class="header__logo-link">
+          <span class="visually-hidden">Page One</span>
+          <img class="header__logo" src="./assets/image/icon/logo.png" alt="Page One 로고">
+        </a>
+      </h1>
+    </div>
+    <div class="header__right">
+      <button class="btn--icon btn--icon--search btn-dialog" aria-label="검색">
+        <img src="./assets/image/icon/search.png" alt="">
+      </button>
+      <button class="btn--icon btn--icon--cart btn-dialog" aria-label="장바구니">
+        <img src="./assets/image/icon/bag.png" alt="">
+      </button>
+    </div>
+  </header>
+  
+  <dialog class="popup-menu">
+    <div class="popup__header">
+      <button class="btn--icon btn--icon--close" aria-label="닫기">
+        <img src="./assets/image/icon/close.png" alt="">
+      </button>
+      <h1>Menu</h1>
+    </div>
+    
+    <div class="popup__content">
+      <ul class="popup-menu__list">
+        <li>
+          <a href="">소설</a>
+        </li>
+        <li>
+          <a href="">시/에세이</a>
+        </li>
+        <div class="line"></div>
+        <li>
+          <a href="">인문</a>
+        </li>
+        <li>
+          <a href="">경제/경영</a>
+        </li>
+        <li>
+          <a href="">자기계발</a>
+        </li>
+        <li>
+          <a href="">정치/사회</a>
+        </li>
+        <li>
+          <a href="">예술/대중문화</a>
+        </li>
+        <div class="line"></div>
+        <li>
+          <a href="">과학</a>
+        </li>
+        <li>
+          <a href="">외국어</a>
+        </li>
+        <li>
+          <a href="">컴퓨터/IT</a>
+        </li>
+      </ul>
+    </div>
+  </dialog>
+
+  <dialog class="popup-search">
+    <div class="popup__header">
+      <button class="btn--icon btn--icon--close" aria-label="닫기">
+        <img src="./assets/image/icon/close.png" alt="">
+      </button>
+      <h1>Search</h1>
+    </div>
+
+    <div class="popup__content">
+      <input type="text" placeholder="검색어를 입력해주세요">
+      <div class="line"></div>
+
+      <div class="popup-search__list">
+        <h2>실시간 검색어</h2>
+        <ul class="popup-search__list-item">
+          <li>
+            <span class="popup-search__list-item-rank highlight">01</span>
+            <span class="popup-search__list-item-title">청춘의 독서</span>
+          </li>
+          <li>
+            <span class="popup-search__list-item-rank highlight">02</span>
+            <span class="popup-search__list-item-title">나이 들 용기</span>
+          </li>
+          <li>
+            <span class="popup-search__list-item-rank highlight">03</span>
+            <span class="popup-search__list-item-title">꽃갈피 셋</span>
+          </li>
+          <li>
+            <span class="popup-search__list-item-rank">04</span>
+            <span class="popup-search__list-item-title">단 한 번의 삶</span>
+          </li>
+          <li>
+            <span class="popup-search__list-item-rank">05</span>
+            <span class="popup-search__list-item-title">빅 사이클</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </dialog>
+
+  <dialog class ="popup-cart">
+    <div class="popup__header">
+      <button class="btn--icon btn--icon--close" aria-label="닫기">
+        <img src="./assets/image/icon/close.png" alt="">
+      </button>
+      <h1>Bag</h1>
+      <span class="popup-cart__count">2</span>
+    </div>
+
+    <div class="popup__content">
+
+      <ul class="popup-cart__list">
+        <li class="popup-cart__list-item">
+          <div class="popup-cart__list-item-left">
+            <h2>첫 여름 완주</h2>
+            <span class="popup-cart__list-item-author">김금희 저자</span>
+            <span class="popup-cart__list-item-price">15,300원</span>
+          </div>
+
+          <div class="popup-cart__list-item-right">
+            <img src="./assets/image/book/첫 여름 완주.png" alt="첫 여름 완주">
+            <button class="button-txt">제거</button>
+          </div>
+        </li>
+
+        <li class="popup-cart__list-item">
+          <div class="popup-cart__list-item-left">
+            <h2>첫 여름 완주</h2>
+            <span class="popup-cart__list-item-author">임주영 지음</span>
+            <span class="popup-cart__list-item-price">15,300원</span>
+          </div>
+
+          <div class="popup-cart__list-item-right">
+            <img src="./assets/image/book/경제신문이 말하지 않는 경제 이야기.png" alt="경제신문이 말하지 않는 경제 이야기">
+            <button class="button-txt">제거</button>
+          </div>
+        </li>
+      </ul>
+
+      <div class="popup-cart__total">
+        <span>결제 예정 금액:</span>
+        <span>15,300원</span>
+      </div>
+
+      <div class="popup-cart__button">
+        <button>계속 쇼핑</button>
+        <button class="button-black">주문 하기</button>
+      </div>
+    </div>
+  </dialog>
 </body>
 </html>

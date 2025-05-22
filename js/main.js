@@ -1,3 +1,5 @@
-$(document).ready(function(){
-  console.log("hi");
+import { dialog } from "./components/dialog.js";
+
+$(document).ready(function () {
+  dialog();
 });
