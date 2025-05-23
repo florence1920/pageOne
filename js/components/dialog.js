@@ -1,6 +1,7 @@
 export function dialog() {
   openDialog();
   closeDialog();
+  closeDialogOnTargetClick();
 }
 
 function openDialog() {
@@ -31,4 +32,12 @@ function closeDialog() {
       dialog.close();
     })
   })
+}
+
+function closeDialogOnTargetClick() {
+  $('dialog').on('mousedown', function(e) {
+    if (!$(e.target).closest('.popup__header, .popup__content').length) {
+      this.close();
+    }
+  });
 }
