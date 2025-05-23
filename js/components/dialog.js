@@ -27,17 +27,28 @@ function openDialog() {
 function closeDialog() {
   const closeBtns = document.querySelectorAll('.btn--icon--close');
   closeBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
+    btn.addEventListener('click', (e) => {
       const dialog = btn.closest('dialog');
-      dialog.close();
-    })
-  })
+      dialog.classList.add('closing');
+      
+      setTimeout(() => {
+        dialog.close();
+        dialog.classList.remove('closing');
+      }, 300);
+    });
+  });
 }
 
 function closeDialogOnTargetClick() {
   $('dialog').on('mousedown', function(e) {
     if (!$(e.target).closest('.popup__header, .popup__content').length) {
-      this.close();
+      const $dialog = $(this);
+      $dialog.addClass('closing');
+      
+      setTimeout(() => {
+        this.close();
+        $dialog.removeClass('closing');
+      }, 300);
     }
   });
 }

@@ -244,6 +244,36 @@ dialog {
     opacity: 1;
   }
 }
+@keyframes slideOutHeaderLeft {
+  from {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  to {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+}
+@keyframes slideOutHeaderRight {
+  from {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+  to {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+@keyframes slideOutContent {
+  from {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+}
 dialog .popup__header {
   border-radius: 40px;
   background-color: #FFABC3;
@@ -389,6 +419,15 @@ dialog.popup-cart[open] .popup__header {
 }
 dialog[open] .popup__content {
   animation: slideInContent 0.5s ease-out forwards;
+}
+dialog.closing .popup__content {
+  animation: slideOutContent 0.3s ease-out forwards;
+}
+dialog.closing.popup-menu .popup__header {
+  animation: slideOutHeaderLeft 0.2s ease-out forwards;
+}
+dialog.closing.popup-search .popup__header, dialog.closing.popup-cart .popup__header {
+  animation: slideOutHeaderRight 0.2s ease-out forwards;
 }
 
 input {
