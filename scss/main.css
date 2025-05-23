@@ -474,4 +474,46 @@ header .header__right {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+footer {
+  padding: 0 20px;
+}
+footer .footer__link {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+footer .footer__link > div:nth-child(-n+2) {
+  display: flex;
+  gap: 30px;
+}
+footer .footer__link > div:nth-child(-n+2) .footer__link-category {
+  width: 84px;
+  font-weight: bold;
+}
+footer .footer__link > div:nth-child(-n+2) > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+footer .footer__bottom {
+  display: flex;
+  flex-direction: column;
+}
+footer .footer__bottom .footer__bottom__logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+footer .footer__bottom .footer__bottom__logo > img {
+  width: 30px;
+  height: 30px;
+}
+footer .footer__bottom .footer__bottom__copyright {
+  margin: 50px 0 10px;
+}
+footer .footer__bottom .footer__bottom__copyright p,
+footer .footer__bottom .footer__bottom__developer p {
+  font-size: 12px;
 }/*# sourceMappingURL=main.css.map */
