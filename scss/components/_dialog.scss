@@ -12,8 +12,40 @@ dialog{
   left: 50%;
   transform: translateX(-50%);
   z-index: 2;
-
   font-weight: normal;
+
+  @keyframes slideInHeaderLeft {
+    from {
+      transform: scaleX(0);
+      transform-origin: left;
+    }
+    to {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+
+  @keyframes slideInHeaderRight {
+    from {
+      transform: scaleX(0);
+      transform-origin: right;
+    }
+    to {
+      transform: scaleX(1);
+      transform-origin: right;
+    }
+  }
+
+  @keyframes slideInContent {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
 
   .popup__header{
     border-radius: 40px;
@@ -25,7 +57,7 @@ dialog{
     left: 0;
     right: 0;
     height: 50px;
-    
+    transform: scaleX(0);
   }
 
   .popup__content{
@@ -37,6 +69,8 @@ dialog{
     top: 64px;
     left: 0;
     right: 0;
+    opacity: 0;
+    transform: translateY(-30px);
 
     .popup-menu__list{
       >li{
@@ -167,6 +201,45 @@ dialog{
           color: white;
         }
       }
+    }
+  }
+
+  &.popup-menu {
+    .popup__header {
+      transform-origin: left;
+    }
+    &[open] {
+      .popup__header {
+        animation: slideInHeaderLeft 0.2s ease-out forwards;
+      }
+    }
+  }
+
+  &.popup-search {
+    .popup__header {
+      transform-origin: right;
+    }
+    &[open] {
+      .popup__header {
+        animation: slideInHeaderRight 0.2s ease-out forwards;
+      }
+    }
+  }
+
+  &.popup-cart {
+    .popup__header {
+      transform-origin: right;
+    }
+    &[open] {
+      .popup__header {
+        animation: slideInHeaderRight 0.2s ease-out forwards;
+      }
+    }
+  }
+
+  &[open] {
+    .popup__content {
+      animation: slideInContent 0.5s ease-out forwards;
     }
   }
 }

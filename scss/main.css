@@ -214,6 +214,36 @@ dialog {
   z-index: 2;
   font-weight: normal;
 }
+@keyframes slideInHeaderLeft {
+  from {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+  to {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+}
+@keyframes slideInHeaderRight {
+  from {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+  to {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+}
+@keyframes slideInContent {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 dialog .popup__header {
   border-radius: 40px;
   background-color: #FFABC3;
@@ -224,6 +254,7 @@ dialog .popup__header {
   left: 0;
   right: 0;
   height: 50px;
+  transform: scaleX(0);
 }
 dialog .popup__content {
   padding: 20px;
@@ -234,6 +265,8 @@ dialog .popup__content {
   top: 64px;
   left: 0;
   right: 0;
+  opacity: 0;
+  transform: translateY(-30px);
 }
 dialog .popup__content .popup-menu__list > li {
   margin-bottom: 12px;
@@ -335,6 +368,27 @@ dialog.popup-cart .popup-cart__button button {
 dialog.popup-cart .popup-cart__button button.button-black {
   background-color: black;
   color: white;
+}
+dialog.popup-menu .popup__header {
+  transform-origin: left;
+}
+dialog.popup-menu[open] .popup__header {
+  animation: slideInHeaderLeft 0.2s ease-out forwards;
+}
+dialog.popup-search .popup__header {
+  transform-origin: right;
+}
+dialog.popup-search[open] .popup__header {
+  animation: slideInHeaderRight 0.2s ease-out forwards;
+}
+dialog.popup-cart .popup__header {
+  transform-origin: right;
+}
+dialog.popup-cart[open] .popup__header {
+  animation: slideInHeaderRight 0.2s ease-out forwards;
+}
+dialog[open] .popup__content {
+  animation: slideInContent 0.5s ease-out forwards;
 }
 
 input {
