@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+  />
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script type="module" src="./js/main.js"></script>
   <link rel="stylesheet" href="./scss/main.css">
   <title>Document</title>
@@ -32,7 +37,145 @@
       </button>
     </div>
   </header>
-  
+
+  <main class="home"> 
+
+    <section class="main-slider">
+      <h2 class="visually-hidden">주요 도서 광고</h2>
+      <div class="swiper main-slider__swiper" role="region" aria-label="주요 도서 광고 슬라이더">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1/5 광고 콜레트, 라울 뒤피 감각적이고 지적인 식물에세이">
+            <img src="./assets/image/book/swiper/main/swiper1.png" alt="광고 콜레트, 라울 뒤피 감각적이고 지적인 식물에세이">
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2/5 광고 매월 100권 이상 팔리는 스테디셀러 명예의 전당">
+            <img src="./assets/image/book/swiper/main/swiper2.png" alt="광고 매월 100권 이상 팔리는 스테디셀러 명예의 전당">
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3/5 광고 한강의 산문 그리고 기록들, 신작 산문 빛과실">
+            <img src="./assets/image/book/swiper/main/swiper3.png" alt="광고 한강의 산문 그리고 기록들, 신작 산문 빛과실">
+          </div>  
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4/5 광고 인터내셔널 부커상 2025 수상작 발표 Heart Lamp">
+            <img src="./assets/image/book/swiper/main/swiper4.png" alt="광고 인터내셔널 부커상 2025 수상작 발표 Heart Lamp">
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5/5 광고 인터내셔널 부커상 2025 수상작 발표 Heart Lamp">
+            <img src="./assets/image/book/swiper/main/swiper5.png" alt="광고 인터내셔널 부커상 2025 수상작 발표 Heart Lamp">
+          </div>
+        </div>
+        <div class="swiper-controls">
+          <button class="swiper-button-prev" aria-label="이전 슬라이드"></button>
+          <button class="swiper-button-pause" aria-label="슬라이드 쇼 일시정지" aria-pressed="false"></button>
+          <button class="swiper-button-next" aria-label="다음 슬라이드"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="today-recommend">
+      <h2>오늘의 책</h2>
+      <div class="swiper today-recommend__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1/6">
+            <div class="book-container">
+              <img src="./assets/image/book/today/고래눈이 내리다.jpg" alt="고래눈이 내리다 책 표지">
+            </div>
+            <p title="고래눈이 내리다">고래눈이 내리다</p>
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2/6">
+            <div class="book-container">
+              <img src="./assets/image/book/today/기울어진 평등.jpg" alt="기울어진 평등 책 표지">
+            </div>
+            <p title="기울어진 평등">기울어진 평등</p>
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3/6">
+            <div class="book-container">
+              <img src="./assets/image/book/today/내 꿈에 가끔만 놀러와.jpg" alt="내 꿈에 가끔만 놀러와 책 표지">
+            </div>
+            <p title="내 꿈에 가끔만 놀러와">내 꿈에 가끔만 놀러와</p>
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4/6">
+            <div class="book-container">
+              <img src="./assets/image/book/today/동공이 약사의 알찬 약국.jpg" alt="동공이 약사의 알찬 약국 책 표지">
+            </div>
+            <p title="동공이 약사의 알찬 약국">동공이 약사의 알찬 약국</p>
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5/6">
+            <div class="book-container">
+              <img src="./assets/image/book/today/식탐 해방.jpg" alt="식탐 해방 책 표지">
+            </div>
+            <p title="식탐 해방">식탐 해방</p>
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6/6">
+            <div class="book-container">
+              <img src="./assets/image/book/today/일억 번째 여름.jpg" alt="일억 번째 여름 책 표지">
+            </div>
+            <p title="일억 번째 여름">일억 번째 여름</p>
+          </div>
+        </div>
+        <div class="swiper-controls">
+          <button class="swiper-button-prev" aria-label="이전 도서"></button>
+          <button class="swiper-button-next" aria-label="다음 도서"></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="special-book">
+      <p>2025 다시 새기는 감동</p>
+      <h2>한강의 산문, 그리고 기록들</h2>
+      <div class="swiper special-book__swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="1/6">
+            <div class="book-container">
+              <img src="./assets/image/book/special/검은 사슴.jpg" alt="검은 사슴 책 표지">
+            </div>
+            <p title="검은 사슴">검은 사슴</p>
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="2/6">
+            <div class="book-container">
+              <img src="./assets/image/book/special/그대의 차가운 손.jpg" alt="그대의 차가운 손 책 표지">
+            </div>
+            <p title="그대의 차가운 손">그대의 차가운 손</p>  
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="3/6">
+            <div class="book-container">
+              <img src="./assets/image/book/special/내 여자의 열매.jpg" alt="내 여자의 열매 책 표지">
+            </div>
+            <p title="내 여자의 열매">내 여자의 열매</p>
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="4/6">
+            <div class="book-container">
+              <img src="./assets/image/book/special/바람이 분다, 가라.jpg" alt="바람이 분다, 가라 책 표지">
+            </div>
+            <p title="바람이 분다, 가라">바람이 분다, 가라</p>
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="5/6">
+            <div class="book-container">
+              <img src="./assets/image/book/special/여수의 사랑.jpg" alt="여수의 사랑 책 표지">
+            </div>
+            <p title="여수의 사랑">여수의 사랑</p>
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6/6">
+            <div class="book-container">
+              <img src="./assets/image/book/special/작별하지 않는다.jpg" alt="작별하지 않는다 책 표지">
+            </div>
+            <p title="작별하지 않는다">작별하지 않는다</p>
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6/6">
+            <div class="book-container">
+              <img src="./assets/image/book/special/채식주의자.jpg" alt="채식주의자 책 표지">
+            </div>
+            <p title="채식주의자">채식주의자</p>
+          </div>
+          <div class="swiper-slide" role="group" aria-roledescription="slide" aria-label="6/6">
+            <div class="book-container">
+              <img src="./assets/image/book/special/희랍어 시간.jpg" alt="희랍어 시간 책 표지">
+            </div>
+            <p title="희랍어 시간">희랍어 시간</p>
+          </div>
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+
+  </main>
+
   <dialog class="popup-menu">
     <div class="popup__header">
       <button class="btn--icon btn--icon--close" aria-label="닫기">
@@ -169,7 +312,9 @@
       </div>
     </div>
   </dialog>
+
   <div style="height: 400px;"></div>
+
   <footer>
     <div class="footer__link">
       <div class="footer__link-first">

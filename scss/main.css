@@ -454,9 +454,155 @@ input::placeholder {
   color: #767676;
 }
 
+.main-slider__swiper {
+  border-radius: 20px;
+  position: relative;
+}
+.main-slider__swiper .swiper-slide {
+  max-height: 500px;
+}
+.main-slider__swiper .swiper-slide img {
+  width: 100%;
+  min-height: 150px;
+  border-radius: 20px;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+.main-slider__swiper .swiper-controls {
+  padding: 8px 6px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 10px;
+  position: absolute;
+  bottom: 14px;
+  right: 14px;
+  display: flex;
+  gap: 10px;
+  z-index: 10;
+}
+.main-slider__swiper .swiper-button-prev,
+.main-slider__swiper .swiper-button-next,
+.main-slider__swiper .swiper-button-pause {
+  position: static;
+  width: 20px;
+  height: 20px;
+  margin: 0;
+}
+.main-slider__swiper .swiper-button-pause {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0;
+  background-image: url("../assets/image/icon/pause.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 24px;
+}
+.main-slider__swiper .swiper-button-pause.paused {
+  background-image: url("../assets/image/icon/play.png");
+}
+.main-slider__swiper .swiper-button-prev::after,
+.main-slider__swiper .swiper-button-next::after {
+  font-size: 12px;
+  color: #333;
+}
+
+.today-recommend__swiper {
+  margin-top: 14px;
+  position: relative;
+}
+.today-recommend__swiper .swiper-slide {
+  width: 40%;
+}
+.today-recommend__swiper .book-container {
+  width: 100%;
+  height: 140px;
+  background-color: #eceff4;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.today-recommend__swiper .book-container img {
+  width: 60%;
+  max-height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.today-recommend__swiper p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 100%;
+}
+.today-recommend__swiper .swiper-button-prev,
+.today-recommend__swiper .swiper-button-next {
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 50%;
+  top: 70px;
+}
+.today-recommend__swiper .swiper-button-prev::after,
+.today-recommend__swiper .swiper-button-next::after {
+  font-size: 16px;
+  color: #333;
+}
+.today-recommend__swiper .swiper-button-prev {
+  left: 10px;
+}
+.today-recommend__swiper .swiper-button-next {
+  right: 10px;
+}
+
+.special-book__swiper {
+  position: relative;
+  padding-bottom: 30px;
+}
+.special-book__swiper .swiper-slide {
+  width: 40%;
+}
+.special-book__swiper .book-container {
+  width: 100%;
+  height: 140px;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.special-book__swiper .book-container img {
+  width: 60%;
+  max-height: 90%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.special-book__swiper p {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: 300;
+  word-break: keep-all;
+  word-wrap: break-word;
+}
+.special-book__swiper .swiper-pagination.swiper-pagination-progressbar {
+  top: auto;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.3);
+  height: 2px;
+}
+.special-book__swiper .swiper-pagination-progressbar-fill {
+  background: #fff;
+}
+
 header {
+  margin: 0 auto;
   padding: 0 10px;
+  max-width: 1440px;
   height: 100px;
+  background-color: #fff;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -464,7 +610,7 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 1;
+  z-index: 2;
 }
 header .header__logo {
   width: 30px;
@@ -474,6 +620,15 @@ header .header__right {
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+main {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 110px 20px 10px;
+}
+main section {
+  margin-bottom: 28px;
 }
 
 footer {
@@ -516,4 +671,24 @@ footer .footer__bottom .footer__bottom__copyright {
 footer .footer__bottom .footer__bottom__copyright p,
 footer .footer__bottom .footer__bottom__developer p {
   font-size: 12px;
+}
+
+.home h2 {
+  font-size: 20px;
+  font-weight: normal;
+}
+.home .special-book {
+  background-color: #161616;
+  color: #fff;
+  border-radius: 10px;
+  padding: 20px 0 20px 20px;
+}
+.home .special-book p {
+  font-size: 14px;
+  font-weight: 300;
+}
+.home .special-book h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 5px 0 30px;
 }/*# sourceMappingURL=main.css.map */
