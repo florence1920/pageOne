@@ -68,3 +68,10 @@ export function initSpecialBookSwiper() {
   });
 }
 
+export function initBestSellerSwiper() {
+  const swiper = new Swiper(".best-seller__swiper", {
+    slidesPerView: "auto",
+    spaceBetween: 10,
+  });
+}
+

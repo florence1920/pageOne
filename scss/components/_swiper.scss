@@ -1,3 +1,5 @@
+@use '../abstracts/variables' as var;
+
 .main-slider__swiper{
   border-radius: 20px;
   position: relative;
@@ -133,7 +135,7 @@
       object-fit: cover;  
     }
   }
-  p{
+  p {
     margin-top: 10px;
     font-size: 14px;
     font-weight: 300;
@@ -150,5 +152,35 @@
 
   .swiper-pagination-progressbar-fill {
     background: #fff;
+  }
+}
+
+.best-seller__swiper{
+  margin-top: 20px;
+  .swiper-slide {
+    width: 84%;
+  }
+  .best-seller__list{
+    .best-seller__item{
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      img {
+        margin-right: 14px;
+        width: 80px;
+        height: 100px;
+      }
+      .best-seller__item-title{
+        margin-bottom: 4px;
+        font-size: 14px;
+        font-weight: 300;
+      }
+      .best-seller__item-author{
+        font-size: 12px;
+        font-weight: 300;
+        color: var.$gray-dark-color;
+      }
+    }
   }
 }
