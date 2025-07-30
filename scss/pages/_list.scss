@@ -1,0 +1,35 @@
+@use "../abstracts/variables" as var;
+main{
+  nav{
+    &.category{
+      margin: 10px 0 40px;
+      .category__list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        .category__item{
+          .category__link{ 
+            display: flex;
+            gap: 2px;
+            .category__item-rank{
+              font-size: 10px;
+            }
+            .category__item-title{
+              font-size: 16px;
+              font-weight: 300;
+            }
+          }
+          &.active{
+            font-weight: bold;
+            .category__item-title{
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+  h2{
+    font-weight: normal;
+  }
+}

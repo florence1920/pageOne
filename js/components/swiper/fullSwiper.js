@@ -1,4 +1,7 @@
 export function initFullSwiper() {
+  const mainSlider = document.querySelector(".main-slider__swiper");
+  if (!mainSlider) return;
+
   const swiper = new Swiper(".main-slider__swiper", {
     loop: true,
     autoplay: {
@@ -21,23 +24,28 @@ export function initFullSwiper() {
   });
 
   const pauseButton = document.querySelector('.swiper-button-pause');
-  let isPlaying = true;
+  if (pauseButton) {
+    let isPlaying = true;
 
-  pauseButton.addEventListener('click', () => {
-    if (isPlaying) {
-      swiper.autoplay.stop();
-      pauseButton.classList.add('paused');
-      pauseButton.setAttribute('aria-label', '재생');
-    } else {
-      swiper.autoplay.start();
-      pauseButton.classList.remove('paused');
-      pauseButton.setAttribute('aria-label', '일시 정지');
-    }
-    isPlaying = !isPlaying;
-  });
+    pauseButton.addEventListener('click', () => {
+      if (isPlaying) {
+        swiper.autoplay.stop();
+        pauseButton.classList.add('paused');
+        pauseButton.setAttribute('aria-label', '재생');
+      } else {
+        swiper.autoplay.start();
+        pauseButton.classList.remove('paused');
+        pauseButton.setAttribute('aria-label', '일시 정지');
+      }
+      isPlaying = !isPlaying;
+    });
+  }
 }
 
 export function initTodayRecommendSwiper() {
+  const todayRecommend = document.querySelector(".today-recommend__swiper");
+  if (!todayRecommend) return;
+
   const swiper = new Swiper(".today-recommend__swiper", {
     slidesPerView: "auto",
     spaceBetween: 10,
@@ -57,6 +65,9 @@ export function initTodayRecommendSwiper() {
 }
 
 export function initSpecialBookSwiper() {
+  const specialBook = document.querySelector(".special-book__swiper");
+  if (!specialBook) return;
+
   const swiper = new Swiper(".special-book__swiper", {
     slidesPerView: "auto",
     spaceBetween: 10,
@@ -69,9 +80,25 @@ export function initSpecialBookSwiper() {
 }
 
 export function initBestSellerSwiper() {
+  const bestSeller = document.querySelector(".best-seller__swiper");
+  if (!bestSeller) return;
+
   const swiper = new Swiper(".best-seller__swiper", {
     slidesPerView: "auto",
     spaceBetween: 10,
   });
+}
+
+// 메인 페이지용 초기화 함수
+export function initMainPage() {
+  initFullSwiper();
+  initTodayRecommendSwiper();
+  initSpecialBookSwiper();
+  initBestSellerSwiper();
+}
+
+// 리스트 페이지용 초기화 함수
+export function initListPage() {
+  initBestSellerSwiper();
 }
 

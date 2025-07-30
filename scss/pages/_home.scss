@@ -20,41 +20,4 @@
       margin:5px 0 30px;
     }
   }
-
-  .ad-wrap{
-      display: flex;
-      flex-direction: column;
-      gap: 10px;  
-    .ad{
-      background-color: var.$gray-light-color;
-      border-radius: 10px;
-      padding: 14px 20px;
-      position: relative;
-      overflow: hidden;
-      .ad__title{
-        font-size: 14px;
-      }
-      .ad__sub-title{
-        margin:6px 0 14px;
-        font-size: 12px;
-        color: var.$gray-dark-color;
-      } 
-      .ad-mark{
-        display: inline-block;
-        background-color: var.$gray-dark-color;
-        color: #fff;
-        font-size: 10px;
-        padding: 5px 10px;
-        border-radius: 20px;
-      }
-      .ad__img{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        right: 40px;
-        width: 80px;
-        rotate: 20deg;
-      }
-    }
-  }
 }

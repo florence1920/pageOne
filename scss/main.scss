@@ -10,9 +10,11 @@
 @use "components/dialog";
 @use "components/input";  
 @use "components/swiper";
+@use "components/adWrap";
 
 @use "layout/header";
 @use "layout/content";
 @use "layout/footer";
 
 @use "pages/home";
+@use "pages/list";
